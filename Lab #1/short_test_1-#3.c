@@ -8,9 +8,9 @@ int main(){
     int n;
     scanf("%d", &n);
     S = malloc(n*sizeof(char));
-    printf("\n%p\n", &S);
+    printf("\n%p\n", S);
     free(S);
     S = NULL;
-    printf("%p", &S);
+    printf("%p", S);
     return 0;
 }
