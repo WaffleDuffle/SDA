@@ -27,27 +27,26 @@ void afisare(struct Angajat angajat){
     printf("%s %s %.2f\n", angajat.nume, angajat.prenume, angajat.salariu);
 }
 
+float calcul_salariu(struct Angajat angajat){
+    angajat.salariu = angajat.sal_ora * angajat.nr_ore;
+        if(angajat.nr_ore > 160)
+            angajat.salariu += ((angajat.nr_ore - 160)*angajat.sal_ora)/2;
+    return angajat.salariu;
+}
+
 int main(){
-    int n, temp_nr_ore;
-    
-    char temp_nume[10], temp_prenume[10];
-    float sal_min, temp_sal_ora;
+    int n;
+    float sal_min;
     scanf("%d", &n);
     for(int i = 0 ; i < n ; ++i){
-        scanf("%s", temp_nume);
-        scanf("%s", temp_prenume);
-        scanf("%f%d", &temp_sal_ora, &temp_nr_ore);
-        strcpy(angajati[i].nume,temp_nume);
-        strcpy(angajati[i].prenume,temp_prenume);
-        angajati[i].sal_ora = temp_sal_ora;
-        angajati[i].nr_ore = temp_nr_ore;
+        scanf("%s", angajati[i].nume);
+        scanf("%s", angajati[i].prenume);
+        scanf("%f%d", &angajati[i].sal_ora, &angajati[i].nr_ore);
         
     }
     scanf("%f", &sal_min);
     for(int i = 0 ; i < n ; ++i){
-        angajati[i].salariu = angajati[i].sal_ora * angajati[i].nr_ore;
-        if(angajati[i].nr_ore > 160)
-            angajati[i].salariu += ((angajati[i].nr_ore - 160)*angajati[i].sal_ora)/2;
+        angajati[i].salariu = calcul_salariu(angajati[i]);
         if(angajati[i].salariu > sal_min)
             afisare(angajati[i]);
         
