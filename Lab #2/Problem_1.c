@@ -30,7 +30,7 @@ void afisare(struct Angajat angajat){
 float calcul_salariu(struct Angajat angajat){
     angajat.salariu = angajat.sal_ora * angajat.nr_ore;
         if(angajat.nr_ore > 160)
-            angajat.salariu += ((angajat.nr_ore - 160)*angajat.sal_ora)/2;
+            angajat.salariu += ((angajat.nr_ore - 160)*angajat.sal_ora)*0.5;
     return angajat.salariu;
 }
 
