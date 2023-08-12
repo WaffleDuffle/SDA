@@ -65,5 +65,6 @@ int main(){
     fisiere = malloc(n*sizeof(struct Fisiere));
     citire(fisiere, n);
     afisare(fisiere,n);
+    free(fisiere);
     return 0;
 }
