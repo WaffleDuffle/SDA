@@ -65,7 +65,7 @@ int main(){
     citiremat(imagine, n, linii, coloane);
     printmat(imagine, n, linii, coloane);
     frecventa(imagine, n, linii, coloane);
-    
+    free(imagine);
     return 0;
 }
 
