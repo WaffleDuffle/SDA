@@ -7,35 +7,54 @@ două șiruri de caractere, citite de pe rânduri diferite;
 OUTPUT:
 șirul de caractere obținut prin concatenarea celui de-al doilea șir în continuarea primului șir.*/
 
+
 #include <stdio.h>
 #include <stdlib.h>
 
-char *concat(char *p1,char *p2){
-    int nr = 0;
-    while(*p1 != '\n'){ //mutam pointerul p1 pana la sfarsitul sirului s1
-        *p1++;
-        nr++;
+char* concat(char *c1, char *c2){
+    while(*c1 != '\0'){
+        *c1++;
     }
     
-    while(*p2 != '\0'){ //copiem caracterele lui s2 in continuarea lui s1 prin aritmetica pointerilor
-        *p1++ = *p2++;
+    while(*c2 != '\0'){
+        *c1++ = *c2++;
     }
-    *p1 = '\0'; // incheiem sirul s1 prin atribuirea caracaterului NULL la sfarsit
-    return p1;
+    
+    *c1 = '\0';
+    
+    return c1;
 }
+
 int main(){
-    int a;
-    char s1[20], s2[20];
     
-    printf("Introduceti sirurile s1 si s2:\n");
-    fgets(s1,20,stdin);
-    fgets(s2,20,stdin); 
+    char* c1 = NULL; 
+    char* c2 = NULL;
+    int nr = 0;
+    char c;
+    c1 = malloc(sizeof(char));
+    c = getc(stdin);
+    *c1 = c;
+    while(*(c1+nr) != '\n'){
+        nr++;
+        c1 = realloc(c1, nr*sizeof(char));
+        c = getc(stdin);
+        *(c1 + nr) = c;
+    }
+    *(c1 + nr) = '\0';
     
-    char *p1, *p2;
-    p1 = s1;
-    p2 = s2;
+    int nr2 = 0;
+    c2 = malloc(sizeof(char));
+    c = getc(stdin);
+    *c2 = c;
+    while(*(c2+nr2) != '\n'){
+        nr2++;
+        c2 = realloc(c2, nr2*sizeof(char));
+        c = getc(stdin);
+        *(c2 + nr2) = c;
+    }
+    c1 = realloc(c1, (nr + nr2)*sizeof(char));
+    concat(c1,c2);
+    printf("%s", c1);
     
-    concat(p1,p2);
-    printf("\nsirul concatenat este:\n%s", s1);
     return 0;
 }
