@@ -1,0 +1,3 @@
+C:/Users/denis/CLionProjects/SDA/Lab3/Texas_HoldEm/cmake-build-debug/CMakeFiles/Texas_HoldEm.dir
+C:/Users/denis/CLionProjects/SDA/Lab3/Texas_HoldEm/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/denis/CLionProjects/SDA/Lab3/Texas_HoldEm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
