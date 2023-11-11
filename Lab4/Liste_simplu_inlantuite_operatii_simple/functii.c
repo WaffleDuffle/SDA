@@ -191,9 +191,9 @@ struct NOD * stergere_nod_oriunde_lista(struct NOD * head, int poz){
     int i = 0;
     struct NOD * tmp = head;
     while(tmp -> next != NULL){
-        if(poz - 1 == i++){                                             //mai am de lucru aici
+        if(poz - 1 == i++){                                             
             struct NOD * nodSters = tmp -> next;
-            tmp = tmp -> next -> next;
+            tmp -> next = nodSters -> next;
             free(nodSters);
             return head;
         }
