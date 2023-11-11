@@ -1,3 +1,17 @@
+/*Să se realizeze un program ce permite citirea de la tastatură a unui text neformatat. Acesta va fi introdus sub forma unei liste de cuvinte. Programul permite afișarea pe ecran a unui meniu cu următoarele operații posibile:
+
+Popularea listei;
+Afișarea cuvintelor din listă;
+Adaugarea unui cuvant la inceputul listei;
+Adaugarea unui cuvant la finalul listei;
+Adaugarea unui cuvant in lista, pe o pozitie specificata de utilizator;
+Stergerea primului cuvant din lista;
+Stergerea ultimului cuvant din lista;
+Stergerea unui cuvant din lista, aflat pe o pozitie specificata de utilizator;
+Stergerea listei;
+Ieșire din program.
+Fiecare opțiune din meniu va fi implementată folosind funcții. Sa se completeze codul deja existent cu functiile lipsa.*/
+
 #include "functii.h"
 
 int main() {
