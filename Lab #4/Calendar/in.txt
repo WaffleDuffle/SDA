@@ -1,0 +1,68 @@
+1
+Workshop 20210407
+1
+Laborator 20210407
+1
+Curs 20210428
+1
+Curs 20210414
+4
+6
+
+Workshop 20210407
+Laborator 20210407
+Curs 20210428
+Curs 20210414
+
+
+task 2
+
+1
+Workshop 20210407
+1
+Laborator 20210407
+1
+Curs 20210428
+1
+Curs 20210414
+2
+Curs
+6
+
+20210428
+20210414
+
+task 3
+
+1
+Workshop 20210407
+1
+Laborator 20210407
+1
+Curs 20210428
+1
+Curs 20210414
+3
+20210407
+6
+
+Workshop
+Laborator
+
+task 4
+
+1
+Workshop 20210407
+1
+Laborator 20210407
+1
+Curs 20210428
+1
+Curs 20210414
+5
+6
+
+Workshop 20210407
+Laborator 20210407
+Curs 20210414
+Curs 20210428

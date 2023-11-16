@@ -3,4 +3,5 @@ project(Calendar C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Calendar main.c)
+add_executable(Calendar main.c
+        functii.c)
