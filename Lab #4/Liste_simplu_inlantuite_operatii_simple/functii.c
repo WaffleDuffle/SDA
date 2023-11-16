@@ -117,7 +117,7 @@ struct NOD * adaugare_nod_oriunde_lista(struct NOD * head, int poz){
         if(poz == i++){
             if(tmp -> next == NULL){
                 nod_nou = creare_nod();
-                tmp -> next = nod_nou;
+                tmp -> next = nod_nou;//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
                 printf("Cuvantul a fost adaugat.\n");
                 return head;
