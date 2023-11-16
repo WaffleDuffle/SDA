@@ -159,6 +159,11 @@ struct NOD * stergere_nod_sfarsit_lista(struct NOD * head){
         perror("ERROR: Lista este goala!\n");
         return head;
     }
+    else if(head -> next == NULL){
+        head = stergere_nod_inceput_lista(head);
+        printf("Atentie, Lista este goala!\n");
+        return head;
+    }
     struct NOD * tmp = head;
     while(tmp -> next != NULL){
         if(tmp -> next -> next == NULL){
