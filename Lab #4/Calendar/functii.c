@@ -113,10 +113,8 @@ void sort_cronologic(struct calendar* head){
     int tmp_data;
     char tmp_nume[20];
     while(curr_x != NULL){
-        printf("a");
         index = curr_x -> next;
         while(index != NULL){
-            printf("b");
             if(curr_x -> data > index -> data){
                 tmp_data = index -> data;
                 index -> data = curr_x -> data;
