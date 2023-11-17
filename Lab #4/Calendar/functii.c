@@ -57,6 +57,17 @@ struct calendar* adaugare_sfarsit(struct calendar* head){
     }
 }
 
+struct NOD * stergere_lista(struct NOD * head){
+    struct NOD * tmp = head;
+    while(tmp != NULL) {
+        tmp = tmp->next;
+        free(head);
+        head = tmp;
+    }
+    printf("Lista a fost stearsa.\n");
+    return head;
+}
+
 void afisare_elemente(struct calendar* head){
     if(head == NULL){
         perror("ERROR: Lista este goala!\n");
