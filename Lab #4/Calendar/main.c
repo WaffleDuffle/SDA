@@ -33,13 +33,11 @@ int main(){
                 break;
             }
             case 6: {
+                lista_noua = stergere_lista(lista_noua);
                 return 0;
             }
-
-
         }
-
-
+        
     }while(1);
 
     return 0;
