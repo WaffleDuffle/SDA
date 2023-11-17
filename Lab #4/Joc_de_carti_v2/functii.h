@@ -11,4 +11,5 @@ struct jucator* creare_nod();
 struct jucator* adaugare_sfarsit_lista(struct jucator*);
 struct jucator* adaugare_carti(struct jucator*, const int*);
 struct jucator* stergere_jucator(struct jucator*, int);
+struct NOD * stergere_lista(struct NOD *);
 void afisare_lista(struct jucator*);
