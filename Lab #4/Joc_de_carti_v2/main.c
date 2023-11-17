@@ -31,6 +31,6 @@ int main() {
         n--;
     }while(n > 1);
     afisare_lista(lista_noua);
-
+    lista_noua = stergere_lista(lista_noua);
     return 0;
 }
