@@ -80,6 +80,17 @@ struct jucator* stergere_jucator(struct jucator* head, int x){
 
 }
 
+struct NOD * stergere_lista(struct NOD * head){
+    struct NOD * tmp = head;
+    while(tmp != NULL) {
+        tmp = tmp->next;
+        free(head);
+        head = tmp;
+    }
+    printf("Lista a fost stearsa.\n");
+    return head;
+}
+
 void afisare_lista(struct jucator* head){
     if(head == NULL){
         printf("Lista este goala!\n");
@@ -91,3 +102,4 @@ void afisare_lista(struct jucator* head){
         tmp = tmp -> next;
     }
 }
+
