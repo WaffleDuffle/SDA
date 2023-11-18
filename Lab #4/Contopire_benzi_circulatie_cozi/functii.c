@@ -50,22 +50,23 @@ void enqueue(struct masina** head, char* x){
 
 }
 
-struct masina* dequeue(struct masina* head){
-    if(is_empty(head)){
+void dequeue(struct masina** head){
+    if(is_empty(*head)){
         perror("ERROR: Lista este goala!\n");
-        return NULL;
+        return;
     }
-    if(head -> next == NULL){
-        free(head);
-       // printf("Lista a fost stearsa.\n");
-        return NULL;
+    if((*head) -> next == NULL){
+        free(*head);
+        *head = NULL;
+        printf("Lista a fost stearsa.\n");
+        return;
     }
     else {
 
-        struct masina* nodSters = head;
-        head = head -> next;
+        struct masina* nodSters = *head;
+        *head = (*head) -> next;
         free(nodSters);
-        return head;
+        return;
     }
 }
 
@@ -87,25 +88,25 @@ struct masina* interclasare(struct masina* head1, struct masina* head2){
     struct masina* tmp2 = head2;
     struct masina* rez = NULL;
     while(tmp1 != NULL && tmp2 != NULL){
-
+        printf("1");
         enqueue(&rez, tmp2 -> nr_inmatriculare);
-        tmp2 = dequeue(tmp2);
+        dequeue(&tmp2);
         enqueue(&rez, tmp1 -> nr_inmatriculare);
-        tmp1 = dequeue(tmp1);
-
+        dequeue(&tmp1);
+  
     }
     while(tmp1 != NULL){
-
+        printf("2");
         enqueue(&rez, tmp1 -> nr_inmatriculare);
-        tmp1 = dequeue(tmp1);
-
+        dequeue(&tmp1);
+    
     }
 
     while(tmp2 != NULL){
-
+        printf("3");
         enqueue(&rez, tmp2 -> nr_inmatriculare);
-        tmp2 = dequeue(tmp2);
-
+        dequeue(&tmp2);
+   
     }
     return rez;
 }
