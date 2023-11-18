@@ -9,6 +9,6 @@ struct masina{
 int is_empty(struct masina*);
 int size(struct masina*);
 void enqueue(struct masina**, char*);
-void dequeue(struct masina**);
 void afisare(struct masina**);
+struct masina* dequeue(struct masina*);
 struct masina* interclasare(struct masina*, struct masina*);
