@@ -1,3 +1,0 @@
-C:/Users/denis/CLionProjects/SDA/Lab #4/Inversare_cuvant_stiva/cmake-build-debug/CMakeFiles/Inversare_cuvant_stiva.dir
-C:/Users/denis/CLionProjects/SDA/Lab #4/Inversare_cuvant_stiva/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/denis/CLionProjects/SDA/Lab #4/Inversare_cuvant_stiva/cmake-build-debug/CMakeFiles/rebuild_cache.dir
