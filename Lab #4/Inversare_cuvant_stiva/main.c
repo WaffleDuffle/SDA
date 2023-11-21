@@ -2,7 +2,7 @@
 #include "functii.h"
 
 int main() {
-    char cuvant[20];
+    char cuvant[100];
     scanf("%s", cuvant);
     struct cuvant* consoane = NULL;
     struct cuvant* vocale = NULL;
@@ -18,7 +18,6 @@ int main() {
     }
     struct cuvant* rez = merge(vocale, consoane);
     rez = merge(rez, NULL);
-    printf("\n");
     afisare(rez);
     return 0;
 }
