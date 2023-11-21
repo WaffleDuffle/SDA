@@ -9,8 +9,7 @@ int main() {
     scanf("%d", &n);
     jucarii = citire_jucarii(jucarii, n);
 
-    for(int i = 0 ; i < 3 ; ++i){
-        scanf("%s", name);
+    while(scanf("%s", name) != EOF){
         lista_circulara = add_last(lista_circulara, name);
     }
     gestiune_cadouri(lista_circulara, jucarii, n);
