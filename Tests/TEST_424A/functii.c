@@ -146,15 +146,6 @@ void redistribuire_2(struct client* head1, struct casa* head2){
     }
 }
 
-struct client* stergere_lista(struct client* head){
-    while(head != NULL){
-        struct client* nodSters = head;
-        head = head -> next;
-        free(nodSters);
-    }
-    return NULL;
-}
-
 void afisare_cazul3(struct casa* head, int nr_clienti){
     struct casa* tmp = head;
     int nr = 0;
@@ -163,14 +154,12 @@ void afisare_cazul3(struct casa* head, int nr_clienti){
             tmp = head;
         if(tmp -> clienti != NULL){
             tmp -> clienti -> val--;
-
             if(tmp -> clienti -> val == 0){
                 printf("%s %d\n", tmp -> clienti -> nume, tmp -> clienti -> nr_produse);
                 tmp -> clienti = tmp -> clienti -> next;
                 nr++;
             }
         }
-
         tmp = tmp -> next;
     }
 }
