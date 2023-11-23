@@ -75,8 +75,7 @@ int main() {
         if(op == '+'){
             ok = 1;
             op = getc(stdin);
-            fgets(nume, 128, stdin);
-            nume[strlen(nume) - 1] = '\0';
+            scanf("%[^\n]", nume);
             biblioteca = push(biblioteca, nume);
         }
         else if(op == '-'){
