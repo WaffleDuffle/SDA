@@ -34,15 +34,7 @@ struct copii* add_last(struct copii* head, char* nume){
     }
 
     struct copii* tmp = head;
-
-    if(tmp -> next == head){
-        struct copii* nodNou = creare_nod(nume);
-        tmp -> next = nodNou;
-        nodNou -> next = head;
-        return head;
-    }
-    tmp = tmp -> next;
-    while(tmp != head){
+    do{
         if(tmp -> next == head){
             struct copii* nodNou = creare_nod(nume);
             tmp -> next = nodNou;
@@ -50,7 +42,7 @@ struct copii* add_last(struct copii* head, char* nume){
             return head;
         }
         tmp = tmp -> next;
-    }
+    }while(tmp != head);
 }
 
 struct cadouri* creare_nod_cadou(char* nume){
