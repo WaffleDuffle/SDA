@@ -102,6 +102,45 @@ struct lista* inversare(struct lista* head, struct lista *head2, int n, int caz)
     return head2;
 }
 
+struct lista* inversare_2(struct lista* head, int n, int caz){
+    struct lista* prev = head;
+    struct lista* next = NULL;
+    struct lista* current = head;
+
+    for(int i = 0 ; i < caz ; ++i)
+        prev = prev -> next;
+
+    for(int i = 0 ; i < caz ; ++i){
+        next = current -> next;
+        current -> next = prev;
+        prev = current;
+        current = next;
+    }
+    head = prev;
+
+    int nr = n / caz - 1;
+
+    struct lista* tmp = head;
+    while(nr){
+        prev = current;
+        for(int i = 0 ; i < caz - 1 ; ++i){
+            prev = prev -> next;
+            tmp = tmp -> next;
+        }
+        tmp -> next = prev;
+        prev = prev -> next;
+
+        for(int i = 0 ; i < caz ; ++i) {
+            next = current->next;
+            current->next = prev;
+            prev = current;
+            current = next;
+        }
+        nr--;
+    }
+    return head;
+}
+
 struct lista* stergere_div7(struct lista* head){
     struct lista* tmp = head;
     int i = 1;
@@ -133,24 +172,21 @@ int main() {
             break;
         }
         case 2: {
-            struct lista* lista2 = NULL;
-            lista2 = inversare(istoric, lista2, n, 3);
-            afisare_lista(lista2);
+            istoric = inversare_2(istoric, n, 3);
+            afisare_lista(istoric);
             break;
         }
         case 3: {
-            struct lista* lista2 = NULL;
             int caz;
             scanf("%d", &caz);
-            lista2 = inversare(istoric, lista2, n, caz);
-            afisare_lista(lista2);
+            istoric = inversare_2(istoric, n, caz);
+            afisare_lista(istoric);
             break;
         }
         case 4: {
-            struct lista* lista2 = NULL;
-            lista2 = inversare(istoric, lista2, n, 3);
-            lista2 = stergere_div7(lista2);
-            afisare_lista(lista2);
+            istoric = inversare_2(istoric, n, 3);
+            istoric = stergere_div7(istoric);
+            afisare_lista(istoric);
             break;
         }
     }
