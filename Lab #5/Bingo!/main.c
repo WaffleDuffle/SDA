@@ -112,8 +112,7 @@ int main() {
             scanf("%d", &val);
             bilet = add_set(bilet, val);
         }
-    for(int i = 0 ; i < nr ; ++i) {
-        scanf("%d", &val);
+    while(scanf("%d", &val) != EOF) {
         if(contains(bilet, val)){
             bilet = delete(bilet, val);
         }
