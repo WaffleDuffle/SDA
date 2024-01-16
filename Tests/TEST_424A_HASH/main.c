@@ -70,14 +70,12 @@ void afisare_table(struct Hash* hash_table, int n){
 
 void stergere(struct Hash* hash_table, int n){
     for(int i = 0 ; i < n ; ++i){
-        if(hash_table -> array[i] != NULL){
-            while(hash_table -> array[i] != NULL){
-                struct HashNode* del_node = hash_table -> array[i];
-                hash_table -> array[i] = hash_table -> array[i] -> next;
-                free(del_node);
-                del_node = NULL;
-            }
-        }
+        while(hash_table -> array[i] != NULL){
+            struct HashNode* del_node = hash_table -> array[i];
+            hash_table -> array[i] = hash_table -> array[i] -> next;
+            free(del_node);
+            del_node = NULL;
+        }        
     }
     free(hash_table -> array);
     hash_table -> array = NULL;
