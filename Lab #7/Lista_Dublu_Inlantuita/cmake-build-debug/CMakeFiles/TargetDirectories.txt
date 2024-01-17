@@ -1,0 +1,3 @@
+C:/Users/denis/CLionProjects/Lista_Dublu_Inlantuita/cmake-build-debug/CMakeFiles/Lista_Dublu_Inlantuita.dir
+C:/Users/denis/CLionProjects/Lista_Dublu_Inlantuita/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/denis/CLionProjects/Lista_Dublu_Inlantuita/cmake-build-debug/CMakeFiles/rebuild_cache.dir
