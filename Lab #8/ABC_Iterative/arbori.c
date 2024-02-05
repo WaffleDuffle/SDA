@@ -168,6 +168,7 @@ struct node* search_node(struct node* prim, int key){
     }
 }
 
+// This function is an extension to delete below node, it removes the whole tree including set subroot
 struct node* delete_search_node(struct node* prim, int key){
     if(prim != NULL){
         if(prim -> left != NULL){
