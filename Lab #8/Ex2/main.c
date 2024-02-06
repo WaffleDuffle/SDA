@@ -67,7 +67,7 @@ void magic(struct node** prim, int* vec, int p, int u, int dim){
         magic(prim, vec, p, m, dim);
         magic(prim, vec, m + 1, u, dim);
     }
-    else if(p == dim)
+    else if(p == dim)  // p also has to reach u, otherwise the last element is not inserted into the tree
         insert(*prim, *(vec + p));
 }
 int main() {
