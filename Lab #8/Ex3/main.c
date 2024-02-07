@@ -94,12 +94,19 @@ int distance(struct node* prim, char* key){
 }
 
 struct node* lca(struct node* prim, char* nume1, char* nume2){
-    if(nume1[0] < prim -> key[0] && nume2[0] < prim -> key[0])
-        return lca(prim -> left, nume1, nume2);
-    else if(nume1[0] > prim -> key[0] && nume2[0] > prim -> key[0])
-        return lca(prim -> right, nume1, nume2);
-    else
-        return prim;
+    if(prim != NULL){
+        if(nume1[0] < prim -> key[0] && nume2[0] < prim -> key[0])
+            return lca(prim -> left, nume1, nume2);
+        else if(nume1[0] > prim -> key[0] && nume2[0] > prim -> key[0])
+            return lca(prim -> right, nume1, nume2);
+        else
+            return prim;
+    }
+    else{
+        printf("Not Found\n");
+        return NULL;
+    }
+
 }
 
 int main() {
