@@ -45,6 +45,7 @@ int main() {
                printf("Witch node?:");
                scanf("%d", &key);
                delete_search_node(tree, key);
+           //    found_node = search_node(tree, key);
            //    if(found_node != NULL){
            //        found_node -> left = delete_tree(found_node -> left);
            //        found_node -> right = delete_tree(found_node -> right);
