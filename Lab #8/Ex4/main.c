@@ -62,7 +62,7 @@ void delete_tree(struct node* prim){
 int main() {
     int size;
     scanf("%d", &size);
-    struct node** array = malloc(size*sizeof(struct node*));
+    struct node** array = (struct node**)malloc(size*sizeof(struct node*));
     int entry;
     for(int i = 0; i < size; i++) {
         scanf("%d", &entry);
